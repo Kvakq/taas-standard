@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TAAS 1.0 — Tehisintellekti kasutamise standard</title>
-    <!-- Подключаем чистый современный шрифт Inter -->
+    <!-- Enabling the clean, modern Inter font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,7 +17,7 @@
      <link rel="stylesheet" href="css/quiz.css">
   </head>
   <body>
-    <!-- Шапка сайта (Navbar) -->
+    <!-- Site Header (Navbar) -->
     <header class="navbar">
       <div class="container nav-container">
         <a href="#" class="logo">TAAS <span>1.0</span></a>
@@ -38,7 +38,7 @@
       </div>
     </header>
 
-    <!-- Главный экран (Hero Section) -->
+    <!-- Hero Section -->
     <main>
       <section class="hero">
         <div class="container hero-content">
@@ -59,7 +59,7 @@
         </div>
       </section>
 
-      <!-- Секция 1: Теория и риски (по материалам Ярмо) -->
+      <!-- Section 1: Theoretical Background & Risks -->
       <section id="teooria" class="section">
         <div class="container">
           <div class="section-header">
@@ -72,7 +72,7 @@
             </p>
           </div>
 
-          <!-- Ключевая статистика из исследования -->
+          <!-- Key statistics from the study -->
           <div class="stats-grid">
             <div class="stat-card">
               <div class="stat-number">82%</div>
@@ -97,7 +97,7 @@
             </div>
           </div>
 
-          <!-- Три карточки по главам теории 2.1, 2.2, 2.3 -->
+          <!-- Three flashcards covering sections 2.1, 2.2, and 2.3 of the theory -->
           <div class="theory-grid">
             <article class="card">
               <div class="card-step">2.1 Võimalused ja piirid</div>
@@ -137,7 +137,7 @@
             </article>
           </div>
 
-          <!-- Выпадающий список с 12 источниками Ярмо -->
+          <!-- Drop-down list with 12 sources from Jarmo -->
           <details class="sources-accordion">
             <summary>Vaata teoreetilise tausta allikaid (12 viidet)</summary>
             <div class="sources-content">
@@ -220,7 +220,7 @@
         </div>
       </section>
 
-      <!-- Секция 2: Обязательные принципы стандарта (по стандарту Артёма § 6–11) -->
+      <!-- Section 2: Mandatory Principles (TAAS 1.0 § 6–11) -->
       <section id="pohimotted" class="section section-alt">
         <div class="container">
           <div class="section-header">
@@ -297,7 +297,7 @@
           </div>
         </div>
       </section>
-      <!-- Секция 3: Уровни использования ИИ A0-A4 (§ 12–18 и Lisa A) -->
+      <!-- Section 3: Standardized AI Usage Levels A0–A4 (§ 12–18, Lisa A) -->
       <section id="tasemed" class="section">
         <div class="container">
           <div class="section-header">
@@ -312,7 +312,7 @@
             </p>
           </div>
 
-          <!-- Список карточек A0 - A4 -->
+          <!-- List of cards A0–A4 -->
           <div class="levels-list">
             <!-- A0 -->
             <div class="level-card">
@@ -480,7 +480,7 @@
             </div>
           </div>
 
-          <!-- Важное правило по умолчанию (§ 18) -->
+          <!-- Important Default Rule (§ 18) -->
           <div class="default-rule-banner">
             <div class="banner-badge">
               § 18. Vaikereegel, kui taset ei ole määratud
@@ -496,7 +496,7 @@
         </div>
       </section>
 
-      <!-- Секция 4: Форма декларации (§ 21 и Lisa B) -->
+      <!-- Section 4: AI Usage Declaration Generator (§ 21, Lisa B) -->
       <section id="deklaratsioon" class="section section-alt">
         <div class="container">
           <div class="section-header">
@@ -513,7 +513,7 @@
           </div>
 
           <div class="declaration-layout">
-            <!-- Левая колонка: интерактивная форма по Lisa B -->
+            <!-- Left column: interactive form by Lisa B -->
             <div class="declaration-form-card">
               <h3>Lisa B: Deklaratsiooni vorm</h3>
               <form id="decl-form" onsubmit="return false;">
@@ -615,7 +615,7 @@
               </form>
             </div>
 
-            <!-- Правая колонка: готовый текст для копирования + пример из Lisa A -->
+            <!-- Right column: text ready to copy + example from Lisa A -->
             <div class="declaration-preview-col">
               <div class="preview-card">
                 <div class="preview-header">
@@ -645,7 +645,7 @@
           </div>
         </div>
       </section>
-<!-- Секция 5: Интерактивный тест (Lisa D – Juhtumipõhine test) -->
+      <!-- Section 5: Interactive Case-Based Quiz (Lisa D) -->
         <section id="test" class="section">
             <div class="container">
                 <div class="section-header">
@@ -660,7 +660,6 @@
                 <div class="quiz-wrapper">
                     <form id="quiz-form" onsubmit="return false;">
                         <div id="quiz-questions-container" class="quiz-questions-list">
-                            <!-- Вопросы генерируются автоматически через script.js -->
                         </div>
 
                         <div class="quiz-actions">
@@ -671,7 +670,7 @@
                         <div id="quiz-warning-box" class="quiz-warning-box" style="display: none;"></div>
                     </form>
 
-                    <!-- Блок результатов теста (появляется после проверки) -->
+                    <!-- Test results block (appears after verification) -->
                     <div id="quiz-result-box" class="quiz-result-box" style="display: none;">
                         <div class="result-score-header">
                             <div>
@@ -687,7 +686,7 @@
         </section>
     </main>
 
-    <!-- Подвал сайта (Footer) -->
+    <!-- Website Footer -->
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-left">
