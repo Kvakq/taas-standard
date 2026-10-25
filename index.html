@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="et">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TAAS 1.0 — Tehisintellekti kasutamise standard</title>
+    <!-- Подключаем чистый современный шрифт Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Modular Stylesheets -->
+     <link rel="stylesheet" href="css/base.css">
+     <link rel="stylesheet" href="css/sections.css">
+     <link rel="stylesheet" href="css/quiz.css">
+  </head>
+  <body>
+    <!-- Шапка сайта (Navbar) -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="#" class="logo">TAAS <span>1.0</span></a>
+
+        <button class="menu-toggle" id="mobile-menu-btn" aria-label="Ava menüü">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+            <nav class="nav-links" id="nav-links">
+                <a href="#teooria">Teooria ja riskid</a>
+                <a href="#pohimotted">Põhimõtted</a>
+                <a href="#tasemed">Tasemed (A0–A4)</a>
+                <a href="#deklaratsioon">Deklaratsioon</a>
+                <a href="ai_academic_integrity_standard.pdf" target="_blank" class="nav-pdf">Täisversioon (PDF)</a>
+                <a href="#test" class="nav-cta">Ava test</a>
+            </nav>
+      </div>
+    </header>
+
+    <!-- Главный экран (Hero Section) -->
+    <main>
+      <section class="hero">
+        <div class="container hero-content">
+          <div class="badge">MUDELSTANDARD • OKTOOBER 2026</div>
+          <h1>Tehisintellekti kasutamise ja akadeemilise aususe standard</h1>
+          <p class="hero-subtitle">
+            Ühtne ja läbipaistev raamistik koolidele, kutseõppeasutustele ja
+            kõrgkoolidele. Siit leiad reeglid, kuidas kasutada tehisintellekti
+            õppetöös vastutustundlikult, millised on lubatud tasemed (A0–A4)
+            ning kuidas oma AI kasutust korrektselt deklareerida.
+          </p>
+          <div class="hero-buttons">
+            <a href="#tasemed" class="btn btn-primary">Vaata AI tasemeid</a>
+            <a href="#test" class="btn btn-secondary"
+              >Pane teadmised proovile</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Секция 1: Теория и риски (по материалам Ярмо) -->
+      <section id="teooria" class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">1. TEOORIA JA TAUST</span>
+            <h2>Miks on ühtset AI standardit vaja?</h2>
+            <p class="section-desc">
+              Generatiivne tehisintellekt pakub kõrghariduses uusi võimalusi
+              personaalseks õppeks, kuid toob kaasa valeinformatsiooni,
+              kriitilise mõtlemise languse ja akadeemilise pettuse riskid.
+            </p>
+          </div>
+
+          <!-- Ключевая статистика из исследования -->
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-number">82%</div>
+              <div class="stat-label">
+                Maailma 50 tippülikoolist omab avalikku AI kasutamise juhendit
+                (Ullah et al. 2024)
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">4,5%</div>
+              <div class="stat-label">
+                GPT-5 Thinking mudeli väidetest sisaldab endiselt vigu,
+                võrreldes GPT-4o 12,9%-ga (OpenAI 2025)
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">76%</div>
+              <div class="stat-label">
+                Ülikoolide juhistest nõuab enne AI kasutamist õppejõu nõusolekut
+                ja 63% avalikustamist
+              </div>
+            </div>
+          </div>
+
+          <!-- Три карточки по главам теории 2.1, 2.2, 2.3 -->
+          <div class="theory-grid">
+            <article class="card">
+              <div class="card-step">2.1 Võimalused ja piirid</div>
+              <h3>Tugi õppimisel vs hallutsinatsioonid</h3>
+              <p>
+                Keelemudelid aitavad tõlkimisel, grammatika parandamisel,
+                ajaplaneerimisel ning pakuvad kohest tagasisidet (Bobula 2024;
+                Lee ja Moore 2024). Samas võivad mudelid genereerida usutavat
+                valeinfot ja puudulikke viiteid, mistõttu peab õppija alati
+                faktide asjakohasust algallikatest kontrollima (TalTech n.d.).
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="card-step">2.2 Akadeemiline ausus</div>
+              <h3>Kriitiline mõtlemine ja tuvastamise piirid</h3>
+              <p>
+                Liigne AI kasutamine valmis vastuste saamiseks kahjustab õppija
+                kriitilist mõtlemist ja probleemilahendusoskust (Bittle ja
+                El-Gayar 2025). Kuna tavalised plagiaadituvastajad ja
+                AI-detektorid ei ole täielikult töökindlad (Xiang et al. 2026),
+                põhineb akadeemiline ausus läbipaistvusel ja AI kasutuse ausal
+                deklareerimisel (Perkins et al. 2024).
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="card-step">2.3 Ülikoolide praktika</div>
+              <h3>Keelamise asemel teadlik suunamine</h3>
+              <p>
+                Eesti kõrgkoolide (TalTech, Tartu Ülikool, Tallinna Ülikool,
+                EKA) ning Haridus- ja Teadusministeeriumi (2024) suunised ei
+                keskendu AI täielikule keelamisele, vaid eetilisele,
+                kriitilisele ja läbipaistvale kasutamisele, kus on selgelt
+                määratud kasutusulatus, piirangud ja viitamise nõuded.
+              </p>
+            </article>
+          </div>
+
+          <!-- Выпадающий список с 12 источниками Ярмо -->
+          <details class="sources-accordion">
+            <summary>Vaata teoreetilise tausta allikaid (12 viidet)</summary>
+            <div class="sources-content">
+              <ol class="sources-list">
+                <li>
+                  <strong>Bittle, Kyle ja Omar El-Gayar (2025).</strong>
+                  „Generative AI and Academic Integrity in Higher Education: A
+                  Systematic Review and Research Agenda“.
+                  <em>Information</em> 16.4, lk 296.
+                </li>
+                <li>
+                  <strong>Bobula, Michal (2024).</strong> „Generative Artificial
+                  Intelligence (AI) in Higher Education: A Comprehensive Review
+                  of Challenges, Opportunities, and Implications“.
+                  <em>Journal of Learning Development in Higher Education</em>
+                  30.
+                </li>
+                <li>
+                  <strong>Lee, Sophia Soomin ja Robert L. Moore (2024).</strong>
+                  „Harnessing Generative AI (GenAI) for Automated Feedback in
+                  Higher Education: A Systematic Review“.
+                  <em>Online Learning</em> 28.3, lk 82–104.
+                </li>
+                <li>
+                  <strong
+                    >Perkins, Mike, Leon Furze, Jasper Roe ja Jason MacVaugh
+                    (2024).</strong
+                  >
+                  „The Artificial Intelligence Assessment Scale (AIAS): A
+                  Framework for Ethical Integration of Generative AI in
+                  Educational Assessment“.
+                  <em>Journal of University Teaching and Learning Practice</em>
+                  21.6, lk 49–66.
+                </li>
+                <li>
+                  <strong
+                    >Ullah, Midrar, Salman Bin Naeem ja Maged N. Kamel Boulos
+                    (2024).</strong
+                  >
+                  „Assessing the Guidelines on the Use of Generative Artificial
+                  Intelligence Tools in Universities: A Survey of the World’s
+                  Top 50 Universities“.
+                  <em>Big Data and Cognitive Computing</em> 8.12, lk 194.
+                </li>
+                <li>
+                  <strong
+                    >Xiang, Lingyun, Nian Li, Yuling Liu ja Jiayong Hu
+                    (2026).</strong
+                  >
+                  „AI-Generated Text Detection: A Comprehensive Review of Active
+                  and Passive Approaches“.
+                  <em>Computers, Materials & Continua</em> 86.3, lk 5.
+                </li>
+                <li>
+                  <strong>Eesti Kunstiakadeemia (2023).</strong>
+                  <em>AI kasutamine õppetöös</em>.
+                </li>
+                <li>
+                  <strong>Haridus- ja Teadusministeerium (2024).</strong>
+                  <em>AI juhend</em>.
+                </li>
+                <li>
+                  <strong>OpenAI (2025).</strong> <em>GPT-5 System Card</em>.
+                </li>
+                <li>
+                  <strong>Tallinna Ülikool (2025).</strong>
+                  <em
+                    >TLU Recommendations for the Use of Artificial
+                    Intelligence</em
+                  >.
+                </li>
+                <li><strong>TalTech (n.d.).</strong> <em>AI TalTechis</em>.</li>
+                <li>
+                  <strong>Tartu Ülikool (2025).</strong>
+                  <em>Suunis tehisintellekti kasutamiseks õppetöös</em>.
+                </li>
+              </ol>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- Секция 2: Обязательные принципы стандарта (по стандарту Артёма § 6–11) -->
+      <section id="pohimotted" class="section section-alt">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag"
+              >2. KOHUSTUSLIKUD PÕHIMÕTTED (TAAS 1.0 § 6–11)</span
+            >
+            <h2>Kuus fundamentaalset reeglit</h2>
+            <p class="section-desc">
+              Mudelstandard lähtub kuuest kohustuslikust põhimõttest, mis
+              kehtivad igas õppeaines ja igal AI kasutustasemel.
+            </p>
+          </div>
+
+          <div class="principles-grid">
+            <div class="principle-card">
+              <span class="paragraph-badge">§ 6</span>
+              <h3>Inimvastutuse põhimõte</h3>
+              <p>
+                AI kasutamine ei vabasta õppijat, õpetajat ega asutust vastutusest.
+                Õppija vastutab esitatud töö õigsuse, faktide ja allikate
+                kontrollimise eest ka siis, kui osa tööst on loodud AI abil.
+              </p>
+            </div>
+
+            <div class="principle-card">
+              <span class="paragraph-badge">§ 7</span>
+              <h3>Õpiväljundi ülimuslikkus</h3>
+              <p>
+                AI lubatavus sõltub sellest, mida ülesanne mõõdab. Kui AI
+                kasutamine asendaks oskuse või teadmise, mida hinnatakse, tuleb
+                selle kasutamist piirata.
+              </p>
+            </div>
+
+            <div class="principle-card">
+              <span class="paragraph-badge">§ 8</span>
+              <h3>Läbipaistvuse põhimõte</h3>
+              <p>
+                Oluline AI-panus (mis mõjutab sisu, argumentatsiooni või koodi)
+                peab olema selgelt deklareeritud, välja arvatud juhul, kui
+                ülesande juhend sätestab teisiti.
+              </p>
+            </div>
+
+            <div class="principle-card">
+              <span class="paragraph-badge">§ 9</span>
+              <h3>Võrdne kohtlemine ja ligipääs</h3>
+              <p>
+                Kohustuslik AI kasutamine ei tohi seada õppijat halvemasse
+                olukorda tasulise teenuse puudumise tõttu. Asutus peab tagama
+                ligipääsu või samaväärse alternatiivi.
+              </p>
+            </div>
+
+            <div class="principle-card">
+              <span class="paragraph-badge">§ 10</span>
+              <h3>Andmekaitse ja konfidentsiaalsus</h3>
+              <p>
+                Avalikku AI teenusesse ei tohi sisestada isikuandmeid, hindamata
+                õppijatöid, eksamiülesandeid, ärisaladust ega konfidentsiaalset
+                teadusmaterjali.
+              </p>
+            </div>
+
+            <div class="principle-card">
+              <span class="paragraph-badge">§ 11</span>
+              <h3>Kontrollitavus ja vaidlustatavus</h3>
+              <p>
+                Ühtegi lõplikku hindamisotsust ega akadeemilise rikkumise otsust
+                ei tehta üksnes AI-detektori või AI-süsteemi väljundi põhjal
+                ilma inimese sisulise kontrollita.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Секция 3: Уровни использования ИИ A0-A4 (§ 12–18 и Lisa A) -->
+      <section id="tasemed" class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag"
+              >3. STANDARDISEERITUD AI KASUTUSTASEMED (§ 12–18, LISA A)</span
+            >
+            <h2>Viis AI kasutustaset (A0–A4)</h2>
+            <p class="section-desc">
+              Iga hinnatava ülesande, projekti või eksami puhul määrab õpetaja
+              ühe viiest AI kasutustasemest. Standardiseeritakse see, kuidas
+              lubatav kasutus üheselt väljendatakse.
+            </p>
+          </div>
+
+          <!-- Список карточек A0 - A4 -->
+          <div class="levels-list">
+            <!-- A0 -->
+            <div class="level-card">
+              <div class="level-badge-col">
+                <span class="level-code">A0</span>
+                <span class="level-name">AI keelatud</span>
+              </div>
+              <div class="level-details-col">
+                <div class="level-principle">
+                  <strong>Põhimõte (§ 13):</strong> Iseseisev sooritus ilma
+                  välise abita (nt kontrollitud eksam või baasoskuse kontroll).
+                </div>
+                <div class="level-rules-grid">
+                  <div class="rule-box allowed">
+                    <span class="rule-title">✓ Tüüpiliselt lubatud</span>
+                    <p>
+                      Ainult sõnaselgelt lubatud tehniline abi, näiteks
+                      õigekirjakontroll ilma teksti ümberkirjutamiseta.
+                    </p>
+                  </div>
+                  <div class="rule-box forbidden">
+                    <span class="rule-title"
+                      >✕ Tüüpiliselt keelatud / piiratud</span
+                    >
+                    <p>
+                      Generatiivne vastuste, koodi, analüüsi või teksti loomine
+                      ülesande sisuliseks täitmiseks.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- A1 -->
+            <div class="level-card">
+              <div class="level-badge-col">
+                <span class="level-code">A1</span>
+                <span class="level-name">AI õpitoena</span>
+              </div>
+              <div class="level-details-col">
+                <div class="level-principle">
+                  <strong>Põhimõte (§ 14):</strong> AI-d võib kasutada
+                  õppimiseks, kuid lõpptöö koostatakse iseseisvalt.
+                </div>
+                <div class="level-rules-grid">
+                  <div class="rule-box allowed">
+                    <span class="rule-title">✓ Tüüpiliselt lubatud</span>
+                    <p>
+                      Mõistete selgitused, harjutused, ideede esmane
+                      genereerimine ja arutamine, tagasiside saamine.
+                    </p>
+                  </div>
+                  <div class="rule-box forbidden">
+                    <span class="rule-title"
+                      >✕ Tüüpiliselt keelatud / piiratud</span
+                    >
+                    <p>
+                      AI sisulise väljundi (teksti, lahenduse, koodi, analüüsi)
+                      esitamine oma hinnatava töö osana ilma õpetaja loata.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- A2 -->
+            <div class="level-card">
+              <div class="level-badge-col">
+                <span class="level-code">A2</span>
+                <span class="level-name">AI abivahendina</span>
+              </div>
+              <div class="level-details-col">
+                <div class="level-principle">
+                  <strong>Põhimõte (§ 15):</strong> AI-d võib kasutada töö osade
+                  loomisel või muutmisel; õppija säilitab sisulise kontrolli.
+                </div>
+                <div class="level-rules-grid">
+                  <div class="rule-box allowed">
+                    <span class="rule-title">✓ Tüüpiliselt lubatud</span>
+                    <p>
+                      Struktuuri arendamine, keeletoimetamine, koodi parandus,
+                      alternatiivid, tagasiside. Oluline AI-panus
+                      deklareeritakse kohustuslikult.
+                    </p>
+                  </div>
+                  <div class="rule-box forbidden">
+                    <span class="rule-title"
+                      >✕ Tüüpiliselt keelatud / piiratud</span
+                    >
+                    <p>
+                      Kontrollimata või deklareerimata oluline AI-panus;
+                      AI-väljundi esitamine kontrollimata faktina või algallika
+                      asendusena.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- A3 -->
+            <div class="level-card">
+              <div class="level-badge-col">
+                <span class="level-code">A3</span>
+                <span class="level-name">AI integreeritud</span>
+              </div>
+              <div class="level-details-col">
+                <div class="level-principle">
+                  <strong>Põhimõte (§ 16):</strong> AI kasutamine on ülesande
+                  kavandatud osa ja võib moodustada olulise osa tööprotsessist.
+                </div>
+                <div class="level-rules-grid">
+                  <div class="rule-box allowed">
+                    <span class="rule-title">✓ Tüüpiliselt lubatud</span>
+                    <p>
+                      Generatsioon, võrdlus, promptimine, AI-väljundite
+                      kriitiline hindamine ja parandamine, tööprotsessi
+                      dokumenteerimine.
+                    </p>
+                  </div>
+                  <div class="rule-box forbidden">
+                    <span class="rule-title"
+                      >✕ Tüüpiliselt keelatud / piiratud</span
+                    >
+                    <p>
+                      AI väljundi pime kopeerimine ilma õppija analüüsi,
+                      allikakontrolli või kriitilise kontrollita.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- A4 -->
+            <div class="level-card">
+              <div class="level-badge-col">
+                <span class="level-code">A4</span>
+                <span class="level-name">AI-keskne / avatud</span>
+              </div>
+              <div class="level-details-col">
+                <div class="level-principle">
+                  <strong>Põhimõte (§ 17):</strong> AI-d võib kasutada
+                  ulatuslikult; hindamise keskmes on õppija enda panus ja
+                  juhtimisloogika.
+                </div>
+                <div class="level-rules-grid">
+                  <div class="rule-box allowed">
+                    <span class="rule-title">✓ Tüüpiliselt lubatud</span>
+                    <p>
+                      Ulatuslik AI kasutus (sisu või koodi genereerimine), kui
+                      õppija väärtus seisneb juhtimises, analüüsis, sünteesis ja
+                      valideerimises.
+                    </p>
+                  </div>
+                  <div class="rule-box forbidden">
+                    <span class="rule-title"
+                      >✕ Tüüpiliselt keelatud / piiratud</span
+                    >
+                    <p>
+                      Ebaaus väide enda panuse kohta; nõutud dokumentatsiooni
+                      või deklaratsiooni puudumine.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Важное правило по умолчанию (§ 18) -->
+          <div class="default-rule-banner">
+            <div class="banner-badge">
+              § 18. Vaikereegel, kui taset ei ole määratud
+            </div>
+            <p>
+              Kui hinnatava töö AI kasutustaset ei ole enne töö alustamist
+              määratud, võib õppija kasutada AI-d
+              <strong>üksnes A1 tasemel (AI õpitoena)</strong>. AI loodud
+              sisulise materjali lisamine esitatavasse töösse eeldab õpetaja
+              selget luba.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Секция 4: Форма декларации (§ 21 и Lisa B) -->
+      <section id="deklaratsioon" class="section section-alt">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag"
+              >4. AI KASUTUSE DEKLARATSIOON (§ 21, LISA B)</span
+            >
+            <h2>Kuidas AI kasutust deklareerida?</h2>
+            <p class="section-desc">
+              Alates A2 tasemest (ja A1 puhul, kui AI mõjutas töö suunda
+              oluliselt) peab õppija lisama tööle lühikese ja kontrollitava
+              deklaratsiooni. Kasuta allolevat vormi deklaratsiooni
+              genereerimiseks.
+            </p>
+          </div>
+
+          <div class="declaration-layout">
+            <!-- Левая колонка: интерактивная форма по Lisa B -->
+            <div class="declaration-form-card">
+              <h3>Lisa B: Deklaratsiooni vorm</h3>
+              <form id="decl-form" onsubmit="return false;">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="decl-name">Õppija nimi</label>
+                    <input
+                      type="text"
+                      id="decl-name"
+                      placeholder="nt Mari Mustikas"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="decl-course">Õppeaine / kursus</label>
+                    <input
+                      type="text"
+                      id="decl-course"
+                      placeholder="nt ITSPEA"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="decl-work">Töö nimetus</label>
+                    <input
+                      type="text"
+                      id="decl-work"
+                      placeholder="nt Projekti lõpuraport"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="decl-level">AI kasutustase</label>
+                    <select id="decl-level">
+                      <option value="A1 – AI õpitoena">A1 – AI õpitoena</option>
+                      <option value="A2 – AI abivahendina" selected>
+                        A2 – AI abivahendina
+                      </option>
+                      <option value="A3 – AI integreeritud">
+                        A3 – AI integreeritud
+                      </option>
+                      <option value="A4 – AI-keskne või avatud kasutus">
+                        A4 – AI-keskne või avatud kasutus
+                      </option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="decl-tools"
+                    >1. Milliseid AI tööriistu kasutasid?</label
+                  >
+                  <input
+                    type="text"
+                    id="decl-tools"
+                    placeholder="nt ChatGPT (GPT-5), Claude, GitHub Copilot"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="decl-purpose">2. Milleks AI-d kasutasid?</label>
+                  <input
+                    type="text"
+                    id="decl-purpose"
+                    placeholder="nt Ideede struktureerimiseks ja keeleliseks toimetamiseks"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="decl-impact"
+                    >3. Millist osa tööst AI sisuliselt mõjutas?</label
+                  >
+                  <input
+                    type="text"
+                    id="decl-impact"
+                    placeholder="nt Peatüki 2 struktuuri ja koodi vigade selgitamist"
+                  />
+                </div>
+
+                <div class="checkbox-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" id="check-1" checked />
+                    <span
+                      >Olen AI loodud faktilised väited ja viited
+                      kontrollinud.</span
+                    >
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" id="check-2" checked />
+                    <span
+                      >Suudan selgitada ja kaitsta kogu esitatud töö sisu.</span
+                    >
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" id="check-3" checked />
+                    <span>AI kasutus vastas ülesandele määratud tasemele.</span>
+                  </label>
+                </div>
+              </form>
+            </div>
+
+            <!-- Правая колонка: готовый текст для копирования + пример из Lisa A -->
+            <div class="declaration-preview-col">
+              <div class="preview-card">
+                <div class="preview-header">
+                  <span>Valmis deklaratsiooni tekst</span>
+                  <button type="button" class="copy-btn" id="copy-decl-btn">
+                    Kopeeri tekst
+                  </button>
+                </div>
+                <pre id="decl-output" class="preview-box"></pre>
+              </div>
+
+              <div class="example-box">
+                <span class="example-tag"
+                  >Näidis (Lisa A): Lühike deklaratsioon töö lõpus</span
+                >
+                <p>
+                  <strong>AI kasutustase:</strong> A2 – AI abivahendina.<br />
+                  <strong>Lubatud:</strong> ideede struktureerimine, koodi
+                  vigade selgitamine, keeleline tagasiside.<br />
+                  <strong>Ei ole lubatud:</strong> terviklahenduse või analüüsi
+                  genereerimine ja esitamine enda tööna.<br />
+                  <strong>Vastutus:</strong> õppija suudab selgitada kõiki
+                  esitatud lahendusi ja on kontrollinud faktilisi väiteid.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+<!-- Секция 5: Интерактивный тест (Lisa D – Juhtumipõhine test) -->
+        <section id="test" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">5. TEADMISTE KONTROLL (LISA D)</span>
+                    <h2>Juhtumipõhine test: Kui hästi tunned TAAS 1.0 standardit?</h2>
+                    <p class="section-desc">
+                        Vasta 8 praktilisele küsimusele, mis põhinevad teoreetilisel taustal ja mudelstandardi reeglitel. 
+                        Pärast esitamist näed kohe oma tulemust ja selgitusi iga küsimuse kohta.
+                    </p>
+                </div>
+
+                <div class="quiz-wrapper">
+                    <form id="quiz-form" onsubmit="return false;">
+                        <div id="quiz-questions-container" class="quiz-questions-list">
+                            <!-- Вопросы генерируются автоматически через script.js -->
+                        </div>
+
+                        <div class="quiz-actions">
+                            <button type="button" class="btn btn-primary" id="submit-quiz-btn">Kontrolli vastuseid</button>
+                            <button type="button" class="btn btn-secondary" id="reset-quiz-btn" style="display: none;">Proovi uuesti</button>
+                        </div>
+
+                        <div id="quiz-warning-box" class="quiz-warning-box" style="display: none;"></div>
+                    </form>
+
+                    <!-- Блок результатов теста (появляется после проверки) -->
+                    <div id="quiz-result-box" class="quiz-result-box" style="display: none;">
+                        <div class="result-score-header">
+                            <div>
+                                <span class="result-badge" id="result-badge">TULEMUS</span>
+                                <h3 id="result-title">Sinu skoor: 0 / 8 (0%)</h3>
+                                <p id="result-message"></p>
+                            </div>
+                            <button type="button" class="copy-btn" id="copy-quiz-result-btn">Kopeeri tulemus</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта (Footer) -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <div class="logo">TAAS <span>1.0</span></div>
+                <p>Tehisintellekti kasutamise ja akadeemilise aususe mudelstandard haridusasutustele.</p>
+            </div>
+            <div class="footer-right">
+                <p><strong>Tallinna Tehnikaülikool (TalTech) • 2026</strong></p>
+                <p>IT eetilised, sotsiaalsed ja professionaalsed aspektid • Rühm 7 (SuperStaarid)</p>
+            </div>
+        </div>
+    </footer>
+    </main>
+
+    <!-- Modular Scripts -->
+    <script src="js/nav.js"></script>
+    <script src="js/declaration.js"></script>
+    <script src="js/quiz-data.js"></script>
+    <script src="js/quiz-app.js"></script>
+  </body>
+</html>
