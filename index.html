@@ -12,9 +12,9 @@
       rel="stylesheet"
     />
     <!-- Modular Stylesheets -->
-     <link rel="stylesheet" href="css/base.css">
-     <link rel="stylesheet" href="css/sections.css">
-     <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/sections.css" />
+    <link rel="stylesheet" href="css/quiz.css" />
   </head>
   <body>
     <!-- Site Header (Navbar) -->
@@ -27,14 +27,19 @@
           <span></span>
           <span></span>
         </button>
-            <nav class="nav-links" id="nav-links">
-                <a href="#teooria">Teooria ja riskid</a>
-                <a href="#pohimotted">Põhimõtted</a>
-                <a href="#tasemed">Tasemed (A0–A4)</a>
-                <a href="#deklaratsioon">Deklaratsioon</a>
-                <a href="ai_academic_integrity_standard.pdf" target="_blank" class="nav-pdf">Täisversioon (PDF)</a>
-                <a href="#test" class="nav-cta">Ava test</a>
-            </nav>
+        <nav class="nav-links" id="nav-links">
+          <a href="#teooria">Teooria ja riskid</a>
+          <a href="#pohimotted">Põhimõtted</a>
+          <a href="#tasemed">Tasemed (A0–A4)</a>
+          <a href="#deklaratsioon">Deklaratsioon</a>
+          <a
+            href="ai_academic_integrity_standard.pdf"
+            target="_blank"
+            class="nav-pdf"
+            >Täisversioon (PDF)</a
+          >
+          <a href="#test" class="nav-cta">Ava test</a>
+        </nav>
       </div>
     </header>
 
@@ -239,9 +244,10 @@
               <span class="paragraph-badge">§ 6</span>
               <h3>Inimvastutuse põhimõte</h3>
               <p>
-                AI kasutamine ei vabasta õppijat, õpetajat ega asutust vastutusest.
-                Õppija vastutab esitatud töö õigsuse, faktide ja allikate
-                kontrollimise eest ka siis, kui osa tööst on loodud AI abil.
+                AI kasutamine ei vabasta õppijat, õpetajat ega asutust
+                vastutusest. Õppija vastutab esitatud töö õigsuse, faktide ja
+                allikate kontrollimise eest ka siis, kui osa tööst on loodud AI
+                abil.
               </p>
             </div>
 
@@ -297,6 +303,7 @@
           </div>
         </div>
       </section>
+
       <!-- Section 3: Standardized AI Usage Levels A0–A4 (§ 12–18, Lisa A) -->
       <section id="tasemed" class="section">
         <div class="container">
@@ -507,124 +514,241 @@
             <p class="section-desc">
               Alates A2 tasemest (ja A1 puhul, kui AI mõjutas töö suunda
               oluliselt) peab õppija lisama tööle lühikese ja kontrollitava
-              deklaratsiooni. Kasuta allolevat vormi deklaratsiooni
-              genereerimiseks.
+              deklaratsiooni. Õppejõud saab siin luua ülesande jaoks ühtse AI
+              kasutamise reeglistiku.
             </p>
           </div>
 
           <div class="declaration-layout">
-            <!-- Left column: interactive form by Lisa B -->
+            <!-- Left column: interactive forms (Student & Professor) -->
             <div class="declaration-form-card">
-              <h3>Lisa B: Deklaratsiooni vorm</h3>
-              <form id="decl-form" onsubmit="return false;">
-                <div class="form-row">
-                  <div class="form-group">
-                    <label for="decl-name">Õppija nimi</label>
-                    <input
-                      type="text"
-                      id="decl-name"
-                      placeholder="nt Mari Mustikas"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label for="decl-course">Õppeaine / kursus</label>
-                    <input
-                      type="text"
-                      id="decl-course"
-                      placeholder="nt ITSPEA"
-                    />
-                  </div>
-                </div>
+              <div style="display: flex; gap: 10px; margin-bottom: 20px">
+                <button
+                  type="button"
+                  id="tab-student"
+                  style="
+                    flex: 1;
+                    padding: 10px 14px;
+                    cursor: pointer;
+                    font-family: inherit;
+                    font-size: 14px;
+                    font-weight: 600;
+                    background: #111827;
+                    color: #ffffff;
+                    border: 1px solid #111827;
+                    border-radius: 8px;
+                    transition: 0.2s;
+                  "
+                >
+                  Õppija deklaratsioon (Lisa B)
+                </button>
+                <button
+                  type="button"
+                  id="tab-professor"
+                  style="
+                    flex: 1;
+                    padding: 10px 14px;
+                    cursor: pointer;
+                    font-family: inherit;
+                    font-size: 14px;
+                    font-weight: 500;
+                    background: #f3f4f6;
+                    color: #374151;
+                    border: 1px solid #d1d5db;
+                    border-radius: 8px;
+                    transition: 0.2s;
+                  "
+                >
+                  Õppejõu deklaratsioon
+                </button>
+              </div>
 
-                <div class="form-row">
+              <!-- STUDENT FORM -->
+              <div id="student-form-wrapper">
+                <h3>Lisa B: Õppija deklaratsiooni vorm</h3>
+                <form id="decl-form" onsubmit="return false;">
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="decl-name">Õppija nimi</label>
+                      <input
+                        type="text"
+                        id="decl-name"
+                        placeholder="nt Mari Mustikas"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="decl-course">Õppeaine / kursus</label>
+                      <input
+                        type="text"
+                        id="decl-course"
+                        placeholder="nt ITSPEA"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="decl-work">Töö nimetus</label>
+                      <input
+                        type="text"
+                        id="decl-work"
+                        placeholder="nt Projekti lõpuraport"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="decl-level">AI kasutustase</label>
+                      <select id="decl-level">
+                        <option value="A0 - AI keelatud">
+                          A0 - AI keelatud
+                        </option>
+                        <option value="A1 - AI õpitoena">
+                          A1 - AI õpitoena
+                        </option>
+                        <option value="A2 - AI abivahendina" selected>
+                          A2 - AI abivahendina
+                        </option>
+                        <option value="A3 - AI integreeritud">
+                          A3 - AI integreeritud
+                        </option>
+                        <option value="A4 - AI-keskne või avatud kasutus">
+                          A4 - AI-keskne või avatud kasutus
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+
                   <div class="form-group">
-                    <label for="decl-work">Töö nimetus</label>
+                    <label for="decl-tools"
+                      >1. Milliseid AI tööriistu kasutasid?</label
+                    >
                     <input
                       type="text"
-                      id="decl-work"
-                      placeholder="nt Projekti lõpuraport"
+                      id="decl-tools"
+                      placeholder="nt ChatGPT (GPT-5), Claude, GitHub Copilot"
                     />
                   </div>
+
                   <div class="form-group">
-                    <label for="decl-level">AI kasutustase</label>
-                    <select id="decl-level">
-                      <option value="A0 - AI keelatud">
+                    <label for="decl-purpose">2. Milleks AI-d kasutasid?</label>
+                    <input
+                      type="text"
+                      id="decl-purpose"
+                      placeholder="nt Ideede struktureerimiseks ja keeleliseks toimetamiseks"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="decl-impact"
+                      >3. Millist osa tööst AI sisuliselt mõjutas?</label
+                    >
+                    <input
+                      type="text"
+                      id="decl-impact"
+                      placeholder="nt Peatüki 2 struktuuri ja koodi vigade selgitamist"
+                    />
+                  </div>
+
+                  <div class="checkbox-group">
+                    <label class="checkbox-label">
+                      <input type="checkbox" id="check-1" checked />
+                      <span
+                        >Olen AI loodud faktilised väited ja viited
+                        kontrollinud.</span
+                      >
+                    </label>
+                    <label class="checkbox-label">
+                      <input type="checkbox" id="check-2" checked />
+                      <span
+                        >Suudan selgitada ja kaitsta kogu esitatud töö
+                        sisu.</span
+                      >
+                    </label>
+                    <label class="checkbox-label">
+                      <input type="checkbox" id="check-3" checked />
+                      <span
+                        >AI kasutus vastas ülesandele määratud tasemele.</span
+                      >
+                    </label>
+                  </div>
+                </form>
+              </div>
+
+              <!-- PROFESSOR FORM -->
+              <div id="professor-form-wrapper" style="display: none">
+                <h3>Õppejõu ülesande AI reeglistiku vorm</h3>
+                <form id="prof-form" onsubmit="return false;">
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="prof-course">Õppeaine nimetus</label>
+                      <input
+                        type="text"
+                        id="prof-course"
+                        placeholder="nt ITSPEA"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="prof-task">Ülesande nimetus</label>
+                      <input
+                        type="text"
+                        id="prof-task"
+                        placeholder="nt Kodutöö 1 / Lõpuraport"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="prof-level"
+                      >Lubatud AI kasutustase (A0–A4)</label
+                    >
+                    <select id="prof-level">
+                      <option
+                        value="A0 - AI keelatud (iseseisev sooritus ilma välise abita)"
+                      >
                         A0 - AI keelatud
                       </option>
-                      <option value="A1 - AI õpitoena">
+                      <option
+                        value="A1 - AI õpitoena (selgitused ja ideed lubatud, lõpptöö koostatakse iseseisvalt)"
+                      >
                         A1 - AI õpitoena
                       </option>
-                      <option value="A2 - AI abivahendina" selected>
+                      <option
+                        value="A2 - AI abivahendina (toimetamine ja struktureerimine lubatud, deklaratsioon kohustuslik)"
+                        selected
+                      >
                         A2 - AI abivahendina
                       </option>
-                      <option value="A3 - AI integreeritud">
+                      <option
+                        value="A3 - AI integreeritud (AI kasutamine on ülesande osa, kriitiline kontroll ja deklaratsioon kohustuslik)"
+                      >
                         A3 - AI integreeritud
                       </option>
-                      <option value="A4 - AI-keskne või avatud kasutus">
+                      <option
+                        value="A4 - AI-keskne / avatud kasutus (ulatuslik kasutus koos protsessi dokumenteerimisega)"
+                      >
                         A4 - AI-keskne või avatud kasutus
                       </option>
                     </select>
                   </div>
-                </div>
 
-                <div class="form-group">
-                  <label for="decl-tools"
-                    >1. Milliseid AI tööriistu kasutasid?</label
-                  >
-                  <input
-                    type="text"
-                    id="decl-tools"
-                    placeholder="nt ChatGPT (GPT-5), Claude, GitHub Copilot"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label for="decl-purpose">2. Milleks AI-d kasutasid?</label>
-                  <input
-                    type="text"
-                    id="decl-purpose"
-                    placeholder="nt Ideede struktureerimiseks ja keeleliseks toimetamiseks"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label for="decl-impact"
-                    >3. Millist osa tööst AI sisuliselt mõjutas?</label
-                  >
-                  <input
-                    type="text"
-                    id="decl-impact"
-                    placeholder="nt Peatüki 2 struktuuri ja koodi vigade selgitamist"
-                  />
-                </div>
-
-                <div class="checkbox-group">
-                  <label class="checkbox-label">
-                    <input type="checkbox" id="check-1" checked />
-                    <span
-                      >Olen AI loodud faktilised väited ja viited
-                      kontrollinud.</span
-                    >
-                  </label>
-                  <label class="checkbox-label">
-                    <input type="checkbox" id="check-2" checked />
-                    <span
-                      >Suudan selgitada ja kaitsta kogu esitatud töö sisu.</span
-                    >
-                  </label>
-                  <label class="checkbox-label">
-                    <input type="checkbox" id="check-3" checked />
-                    <span>AI kasutus vastas ülesandele määratud tasemele.</span>
-                  </label>
-                </div>
-              </form>
+                  <div class="form-group">
+                    <label for="prof-conditions">Lisatingimused</label>
+                    <input
+                      type="text"
+                      id="prof-conditions"
+                      placeholder="nt Töö lõppu tuleb lisada Lisa B deklaratsioon ja viited vestlusele"
+                    />
+                  </div>
+                </form>
+              </div>
             </div>
 
             <!-- Right column: text ready to copy + example from Lisa A -->
             <div class="declaration-preview-col">
               <div class="preview-card">
                 <div class="preview-header">
-                  <span>Valmis deklaratsiooni tekst</span>
+                  <span id="preview-header-title"
+                    >Valmis deklaratsiooni tekst</span
+                  >
                   <button type="button" class="copy-btn" id="copy-decl-btn">
                     Kopeeri tekst
                   </button>
@@ -650,61 +774,97 @@
           </div>
         </div>
       </section>
+
       <!-- Section 5: Interactive Case-Based Quiz (Lisa D) -->
-        <section id="test" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">5. TEADMISTE KONTROLL (LISA D)</span>
-                    <h2>Juhtumipõhine test: Kui hästi tunned TAAS 1.0 standardit?</h2>
-                    <p class="section-desc">
-                        Vasta 8 praktilisele küsimusele, mis põhinevad teoreetilisel taustal ja mudelstandardi reeglitel. 
-                        Pärast esitamist näed kohe oma tulemust ja selgitusi iga küsimuse kohta.
-                    </p>
+      <section id="test" class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">5. TEADMISTE KONTROLL (LISA D)</span>
+            <h2>Juhtumipõhine test: Kui hästi tunned TAAS 1.0 standardit?</h2>
+            <p class="section-desc">
+              Vasta 8 praktilisele küsimusele, mis põhinevad teoreetilisel
+              taustal ja mudelstandardi reeglitel. Pärast esitamist näed kohe
+              oma tulemust ja selgitusi iga küsimuse kohta.
+            </p>
+          </div>
+
+          <div class="quiz-wrapper">
+            <form id="quiz-form" onsubmit="return false;">
+              <div
+                id="quiz-questions-container"
+                class="quiz-questions-list"
+              ></div>
+
+              <div class="quiz-actions">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="submit-quiz-btn"
+                >
+                  Kontrolli vastuseid
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  id="reset-quiz-btn"
+                  style="display: none"
+                >
+                  Proovi uuesti
+                </button>
+              </div>
+
+              <div
+                id="quiz-warning-box"
+                class="quiz-warning-box"
+                style="display: none"
+              ></div>
+            </form>
+
+            <!-- Test results block (appears after verification) -->
+            <div
+              id="quiz-result-box"
+              class="quiz-result-box"
+              style="display: none"
+            >
+              <div class="result-score-header">
+                <div>
+                  <span class="result-badge" id="result-badge">TULEMUS</span>
+                  <h3 id="result-title">Sinu skoor: 0 / 8 (0%)</h3>
+                  <p id="result-message"></p>
                 </div>
-
-                <div class="quiz-wrapper">
-                    <form id="quiz-form" onsubmit="return false;">
-                        <div id="quiz-questions-container" class="quiz-questions-list">
-                        </div>
-
-                        <div class="quiz-actions">
-                            <button type="button" class="btn btn-primary" id="submit-quiz-btn">Kontrolli vastuseid</button>
-                            <button type="button" class="btn btn-secondary" id="reset-quiz-btn" style="display: none;">Proovi uuesti</button>
-                        </div>
-
-                        <div id="quiz-warning-box" class="quiz-warning-box" style="display: none;"></div>
-                    </form>
-
-                    <!-- Test results block (appears after verification) -->
-                    <div id="quiz-result-box" class="quiz-result-box" style="display: none;">
-                        <div class="result-score-header">
-                            <div>
-                                <span class="result-badge" id="result-badge">TULEMUS</span>
-                                <h3 id="result-title">Sinu skoor: 0 / 8 (0%)</h3>
-                                <p id="result-message"></p>
-                            </div>
-                            <button type="button" class="copy-btn" id="copy-quiz-result-btn">Kopeeri tulemus</button>
-                        </div>
-                    </div>
-                </div>
+                <button
+                  type="button"
+                  class="copy-btn"
+                  id="copy-quiz-result-btn"
+                >
+                  Kopeeri tulemus
+                </button>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Website Footer -->
     <footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-left">
-                <div class="logo">TAAS <span>1.0</span></div>
-                <p>Tehisintellekti kasutamise ja akadeemilise aususe mudelstandard haridusasutustele.</p>
-            </div>
-            <div class="footer-right">
-                <p><strong>Tallinna Tehnikaülikool (TalTech) • 2026</strong></p>
-                <p>IT eetilised, sotsiaalsed ja professionaalsed aspektid • Rühm 7 (SuperStaarid)</p>
-            </div>
+      <div class="container footer-container">
+        <div class="footer-left">
+          <div class="logo">TAAS <span>1.0</span></div>
+          <p>
+            Tehisintellekti kasutamise ja akadeemilise aususe mudelstandard
+            haridusasutustele.
+          </p>
         </div>
+        <div class="footer-right">
+          <p><strong>Tallinna Tehnikaülikool (TalTech) • 2026</strong></p>
+          <p>
+            IT eetilised, sotsiaalsed ja professionaalsed aspektid • Rühm 7
+            (SuperStaarid)
+          </p>
+        </div>
+      </div>
     </footer>
-    </main>
 
     <!-- Modular Scripts -->
     <script src="js/nav.js"></script>
